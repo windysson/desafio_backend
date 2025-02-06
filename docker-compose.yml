@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: boletos_db
+      MYSQL_ROOT_PASSWORD: senha123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  web:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    command: ["sh", "-c", "sleep 10 && python3.9 manage.py migrate && python3.9 manage.py runserver 0.0.0.0:8000"]
+
+volumes:
+  mysql_data:
