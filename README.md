@@ -20,12 +20,17 @@ cd desafio_backend/
 
 ---
 
-## **2️ Rodar o Projeto com Docker**
+## **2️ Rodar o Projeto **
 Execute os seguintes comandos para construir e iniciar o ambiente:
-
+Com docker:
 ```bash
 docker-compose build
 docker-compose up -d
+```
+Sem docker:
+```bash
+pip install -r requirements.txt
+python manage.py runserver
 ```
 
 Isso irá:
