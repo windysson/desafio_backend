@@ -15,7 +15,7 @@ Antes de começar, certifique-se de ter instalado:
 ## **1️ Clonar o Repositório**
 ```bash
 git clone https://github.com/windysson/desafio_backend.git
-cd seu-repositorio
+cd desafio_backend/
 ```
 
 ---
