@@ -27,7 +27,7 @@ Com docker:
 docker-compose build
 docker-compose up -d
 ```
-Sem docker:
+Sem docker mude no settings.py o host do banco de dados para 127.0.0.1:
 ```bash
 pip install -r requirements.txt
 python manage.py runserver
